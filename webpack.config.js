@@ -1,6 +1,8 @@
 var path = require("path");
+var webpack = require('webpack');
 
 module.exports = {
+  devtool: 'inline-source-map',
   context: __dirname,
   entry: "./script.js",
   output: {
@@ -13,10 +15,23 @@ module.exports = {
       include: /\.pug/,
       // pass options to pug as a query ('pug-html-loader?pretty')
       loaders: ['pug-loader']
-    },
-    {
-        test: /\.scss$/,
-        loaders: ["style", "css", "sass"]
+    }, {
+      test: /\.woff2?$|\.ttf$|\.eot$|\.svg$/,
+      loader: "file"
+    }, {
+      test: /\.scss$/,
+      loaders: ["style", "css", "sass"]
     }]
-  }
+  },
+  plugins: [
+    new webpack.ProvidePlugin({
+      jQuery: 'jquery',
+      $: 'jquery',
+      jquery: 'jquery'
+    }),
+    // new webpack.optimize.OccurrenceOrderPlugin(),
+    // new webpack.HotModuleReplacementPlugin(),
+    // new webpack.NoErrorsPlugin(),
+
+  ]
 };

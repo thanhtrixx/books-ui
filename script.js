@@ -1,9 +1,11 @@
 var $ = require('jquery');
 var html = require('./pug/index.pug');
+require('bootstrap');
+var css = require('./sass/style.scss');
+
 
 $(function() {
   $('body').html(html);
 });
 
-var css = require('./sass/style.scss');
-console.log(css);
+console.log('css');
