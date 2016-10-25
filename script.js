@@ -5,7 +5,7 @@ var css = require('./sass/style.scss');
 
 
 $(function() {
-  $('body').html(html);
+	$('body').html(html);
 });
 
 console.log('css');
