@@ -6,7 +6,5 @@ var css = require('./sass/style.scss');
 
 $(function () {
 
-	$('body').html(html);
-
 	$.material.init();
 });

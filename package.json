@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "run": "webpack-dev-server --progress --colors --watch --hot --host 0.0.0.0",
+    "start": "webpack-dev-server --progress --colors --watch --inline --hot --host 0.0.0.0",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
   },
