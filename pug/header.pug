@@ -1,55 +1,52 @@
-header#top.bs-docs-nav.navbar.navbar-static-top
-	nav.navbar.navbar-default(role='navigation')
-		.container-fluid
-			// Brand and toggle get grouped for better mobile display
-			.navbar-header
-				button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
-					span.sr-only Toggle navigation
-					span.icon-bar
-					span.icon-bar
-					span.icon-bar
-				a.navbar-brand(href='#') Brand
-			// Collect the nav links, forms, and other content for toggling
-			#bs-example-navbar-collapse-1.collapse.navbar-collapse
-				ul.nav.navbar-nav
-					li.active
-						a(href='#') Link
-					li
-						a(href='#') Link
-					li.dropdown
-						a.dropdown-toggle(href='#', data-toggle='dropdown')
-							| Dropdown 
-							b.caret
-						ul.dropdown-menu
-							li
-								a(href='#') Action
-							li
-								a(href='#') Another action
-							li
-								a(href='#') Something else here
-							li.divider
-							li
-								a(href='#') Separated link
-							li.divider
-							li
-								a(href='#') One more separated link
-				.col-sm-3.col-md-3
-					form.navbar-form(role='search')
-						.input-group
-							input.form-control(type='text', placeholder='Search', name='q')
-							.input-group-btn
-								button.btn.btn-default(type='submit')
-									i.glyphicon.glyphicon-search
-				ul.nav.navbar-nav.navbar-right
-					li.dropdown
-						a.dropdown-toggle(href='#', data-toggle='dropdown')
-							| Account 
-							b.caret
-						ul.dropdown-menu.pull-left(role='menu')
-							li
-								a(href='#') Playlists
-							li
-								a(href='#') Setting
-							li.divider
-							li
-								a(href='#') Log out
+.navbar.navbar-inverse
+	.container-fluid
+		.navbar-header
+			button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-inverse-collapse')
+				span.icon-bar
+				span.icon-bar
+				span.icon-bar
+			a.navbar-brand(href='javascript:void(0)')
+				img(src='assets/book-icon.svg')
+		.navbar-collapse.collapse.navbar-inverse-collapse
+			ul.nav.navbar-nav
+				li.active
+					a(href='javascript:void(0)') Active
+				li
+					a(href='javascript:void(0)') Link
+				li.dropdown
+					a.dropdown-toggle(href='index.html', data-toggle='dropdown')
+						| Dropdown
+						b.caret
+					ul.dropdown-menu
+						li
+							a(href='javascript:void(0)') Action
+						li
+							a(href='javascript:void(0)') Another action
+						li
+							a(href='javascript:void(0)') Something else here
+						li.divider
+						li.dropdown-header Dropdown header
+						li
+							a(href='javascript:void(0)') Separated link
+						li
+							a(href='javascript:void(0)') One more separated link
+			form.navbar-form.navbar-left
+				.form-group
+					input.form-control.col-md-8(type='text', placeholder='Search')
+			ul.nav.navbar-nav.navbar-right
+				li
+					a(href='javascript:void(0)') Link
+				li.dropdown
+					a.dropdown-toggle(href='index.html', data-toggle='dropdown')
+						| Dropdown
+						b.caret
+					ul.dropdown-menu
+						li
+							a(href='javascript:void(0)') Action
+						li
+							a(href='javascript:void(0)') Another action
+						li
+							a(href='javascript:void(0)') Something else here
+						li.divider
+						li
+							a(href='javascript:void(0)') Separated link

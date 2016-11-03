@@ -1,11 +1,12 @@
 var $ = require('jquery');
 var html = require('./pug/index.pug');
-require('bootstrap');
+require('bootstrap-sass');
+require('bootstrap-material-design');
 var css = require('./sass/style.scss');
 
+$(function () {
 
-$(function() {
 	$('body').html(html);
-});
 
-console.log('css');
+	$.material.init();
+});
