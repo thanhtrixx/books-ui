@@ -1,5 +1,6 @@
 .navbar.navbar-inverse
 	.container-fluid
+	.container-fullwidth
 		.navbar-header
 			button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-inverse-collapse')
 				span.icon-bar
@@ -10,43 +11,37 @@
 		.navbar-collapse.collapse.navbar-inverse-collapse
 			ul.nav.navbar-nav
 				li.active
-					a(href='javascript:void(0)') Active
+					a(href='javascript:void(0)') Home
 				li
-					a(href='javascript:void(0)') Link
+					a(href='javascript:void(0)') New
 				li.dropdown
 					a.dropdown-toggle(href='index.html', data-toggle='dropdown')
-						| Dropdown
+						| Top
 						b.caret
 					ul.dropdown-menu
 						li
-							a(href='javascript:void(0)') Action
+							a(href='javascript:void(0)') Top in week
 						li
-							a(href='javascript:void(0)') Another action
+							a(href='javascript:void(0)') Top in month
 						li
-							a(href='javascript:void(0)') Something else here
-						li.divider
-						li.dropdown-header Dropdown header
+							a(href='javascript:void(0)') Top
+				li.dropdown
+					a.dropdown-toggle(href='index.html', data-toggle='dropdown')
+						| Category
+						b.caret
+					ul.dropdown-menu
 						li
-							a(href='javascript:void(0)') Separated link
+							a(href='javascript:void(0)') English
 						li
-							a(href='javascript:void(0)') One more separated link
+							a(href='javascript:void(0)') Story
+						li
+							a(href='javascript:void(0)') Improve
+
 			form.navbar-form.navbar-left
 				.form-group
 					input.form-control.col-md-8(type='text', placeholder='Search')
 			ul.nav.navbar-nav.navbar-right
 				li
-					a(href='javascript:void(0)') Link
-				li.dropdown
-					a.dropdown-toggle(href='index.html', data-toggle='dropdown')
-						| Dropdown
-						b.caret
-					ul.dropdown-menu
-						li
-							a(href='javascript:void(0)') Action
-						li
-							a(href='javascript:void(0)') Another action
-						li
-							a(href='javascript:void(0)') Something else here
-						li.divider
-						li
-							a(href='javascript:void(0)') Separated link
+					a#loginBtn(href='javascript:void(0)') Login
+				li
+					a#registerBtn(href='javascript:void(0)') Register

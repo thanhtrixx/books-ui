@@ -1,0 +1,19 @@
+.modal#registerForm
+	.modal-dialog
+		.modal-content
+			.modal-header
+				button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+				h4.modal-title Login
+			.modal-body
+				.form-group.label-floating
+					label.control-label(for='focusedEmail') Email
+					input#focusedEmail.form-control(type='email')
+				.form-group.label-floating
+					label.control-label(for='focusedPassword') Password
+					input#focusedPassword.form-control(type='password')
+				.form-group.label-floating
+					label.control-label(for='focusedPassword') Retype password
+					input#focusedPassword.form-control(type='password')
+			.modal-footer
+				button.btn.btn-default.btn-raised(type='button') Reset
+				button.btn.btn-primary.btn-raised(type='button') Register

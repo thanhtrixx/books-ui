@@ -31,9 +31,11 @@ module.exports = {
 		}),
 		new HtmlWebpackPlugin({
 			filename: 'index.html',
-			// favicon: 'assets/book-icon.svg',
-			template: 'pug/template.pug',
-			// title: 'PUG demo'
+			template: 'pug/index.pug',
+		}),
+		new HtmlWebpackPlugin({
+			filename: 'index_login.html',
+			template: 'pug/index_login.pug',
 		}),
 		new webpack.optimize.OccurrenceOrderPlugin(),
 		new webpack.NoErrorsPlugin(),

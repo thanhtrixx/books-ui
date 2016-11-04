@@ -7,4 +7,12 @@ var css = require('./sass/style.scss');
 $(function () {
 
 	$.material.init();
+
+	$('#loginBtn').click(function () {
+		$('#loginForm').modal('toggle');
+	});
+
+	$('#registerBtn').click(function () {
+		$('#registerForm').modal('toggle');
+	});
 });
