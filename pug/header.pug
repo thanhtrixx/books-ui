@@ -1,6 +1,5 @@
 .navbar.navbar-inverse
-	.container-fluid
-	.container-fullwidth
+	.container
 		.navbar-header
 			button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-inverse-collapse')
 				span.icon-bar
@@ -9,6 +8,11 @@
 			a.navbar-brand(href='javascript:void(0)')
 				img(src='assets/book-icon.svg')
 		.navbar-collapse.collapse.navbar-inverse-collapse
+
+			form.navbar-form.navbar-left
+				.form-group
+					input.form-control.col-md-8(type='text', placeholder='Search')
+
 			ul.nav.navbar-nav
 				li.active
 					a(href='javascript:void(0)') Home
@@ -23,6 +27,7 @@
 							a(href='javascript:void(0)') Top in week
 						li
 							a(href='javascript:void(0)') Top in month
+						li.divider
 						li
 							a(href='javascript:void(0)') Top
 				li.dropdown
@@ -37,9 +42,6 @@
 						li
 							a(href='javascript:void(0)') Improve
 
-			form.navbar-form.navbar-left
-				.form-group
-					input.form-control.col-md-8(type='text', placeholder='Search')
 			ul.nav.navbar-nav.navbar-right
 				li
 					a#loginBtn(href='javascript:void(0)') Login

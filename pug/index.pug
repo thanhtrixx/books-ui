@@ -10,15 +10,14 @@ html
 		link(rel='stylesheet', type='text/css', href='//fonts.googleapis.com/css?family=Roboto:300,400,500,700')
 		link(rel='stylesheet', type='text/css', href='//fonts.googleapis.com/icon?family=Material+Icons')
 	body
+		include header.pug
+		
 		.container
-			include header.pug
-
 			include content.pug
-
 			include float_btn.pug
 
-			include footer.pug
+		include footer.pug
 
-			include login_form.pug
+		include login_form.pug
 
-			include register_form.pug
+		include register_form.pug
