@@ -1,4 +1,4 @@
-.navbar.navbar-inverse
+.navbar.navbar-inverse.navbar-fixed-top
 	.container
 		.navbar-header
 			button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-inverse-collapse')
@@ -8,10 +8,6 @@
 			a.navbar-brand(href='javascript:void(0)')
 				img(src='assets/book-icon.svg')
 		.navbar-collapse.collapse.navbar-inverse-collapse
-
-			form.navbar-form.navbar-left
-				.form-group
-					input.form-control.col-md-8(type='text', placeholder='Search')
 
 			ul.nav.navbar-nav
 				li.active
@@ -41,6 +37,10 @@
 							a(href='javascript:void(0)') Story
 						li
 							a(href='javascript:void(0)') Improve
+
+			form.navbar-form.navbar-left
+				.form-group
+					input.form-control.col-md-8(type='text', placeholder='Search')
 
 			ul.nav.navbar-nav.navbar-right
 				li
