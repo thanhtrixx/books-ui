@@ -6,10 +6,6 @@ module.exports = {
 	devtool: 'inline-source-map',
 	context: __dirname,
 	entry: './js/index.js',
-	// resolve: {
-	// 	extensions: ['', '.js', '.json'],
-	// 	modules: [path.resolve(__dirname, './js'), 'node_modules/'],
-  // },
 	output: {
 		path: path.join(__dirname, 'dist'),
 		publicPath: '',
@@ -28,6 +24,11 @@ module.exports = {
 		}]
 	},
 	plugins: [
+		new webpack.DefinePlugin({
+			'process.env': {
+				'NODE_ENV': JSON.stringify('production')
+			}
+		}),
 		new webpack.ProvidePlugin({
 			jQuery: 'jquery',
 			$: 'jquery',
@@ -43,5 +44,9 @@ module.exports = {
 		// }),
 		new webpack.optimize.OccurrenceOrderPlugin(),
 		new webpack.NoErrorsPlugin(),
+		new webpack.optimize.CommonsChunkPlugin('common.js'),
+		new webpack.optimize.DedupePlugin(),
+		new webpack.optimize.UglifyJsPlugin(),
+		new webpack.optimize.AggressiveMergingPlugin()
 	]
 };

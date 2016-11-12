@@ -1,19 +1,32 @@
-var $ = require('jquery');
-var html = require('../pug/index.pug');
-require('bootstrap-sass');
-require('bootstrap-material-design');
-var css = require('../sass/style.scss');
-// require('./search_navbar');
+var $ = window.jQuery =  require('jquery');
+require('materialize-css');
+require('../sass/index.scss');
+require('materialize-css/sass/materialize.scss');
 
 $(function () {
 
-	$.material.init();
+	$('#collapse').sideNav();
+	$('#search-nav').hide();
 
-	$('#loginBtn').click(function () {
-		$('#loginForm').modal('toggle');
-	});
+	$('.search-btn').click(showSearchNav);
 
-	$('#registerBtn').click(function () {
-		$('#registerForm').modal('toggle');
-	});
+	$('#search').focusout(hideSearchNav);
 });
+
+function hideSearchNav() {
+	console.log('hide');
+	showHideSearchNav();
+	$('#search').val('');
+}
+
+function showSearchNav() {
+	showHideSearchNav();
+	setTimeout(function () {
+		$('#search').focus();
+	}, 700);
+}
+
+function showHideSearchNav() {
+	$('#search-nav').toggle(500);
+	$('#main-nav').toggle(500);
+} 
