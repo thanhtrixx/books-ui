@@ -20,7 +20,7 @@ module.exports = {
 			loader: 'file'
 		}, {
 			test: /\.scss$/,
-			loaders: ['style', 'css', 'sass']
+			loaders: ['style', 'css', 'resolve-url', 'sass?sourceMap']
 		}]
 	},
 	plugins: [
