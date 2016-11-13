@@ -3,7 +3,7 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-	devtool: 'inline-source-map',
+	devtool: 'cheap-module-source-map',
 	context: __dirname,
 	entry: './js/index.js',
 	output: {
@@ -47,6 +47,8 @@ module.exports = {
 		new webpack.optimize.CommonsChunkPlugin('common.js'),
 		new webpack.optimize.DedupePlugin(),
 		new webpack.optimize.UglifyJsPlugin(),
-		new webpack.optimize.AggressiveMergingPlugin()
+		new webpack.optimize.AggressiveMergingPlugin(),
+		new webpack.optimize.LimitChunkCountPlugin({maxChunks: 15}),
+		new webpack.optimize.MinChunkSizePlugin({minChunkSize: 10000})
 	]
 };

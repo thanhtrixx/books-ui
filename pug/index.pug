@@ -10,47 +10,50 @@ html
 		meta(name='description', content='The website for book lovers')
 		meta(name='viewport', content='width=device-width, initial-scale=1.0')
 		meta(http-equiv='X-UA-Compatible', content='IE=edge')
-
+		meta(name='theme-color', content='#81d4fa')
 	body
+		include header.pug
+	
 
-		nav.light-blue.lighten-1(role='navigation')
-			#main-nav.nav-wrapper.container
-				a.brand-logo(href='#!')
-					i.material-icons cloud
-					| Logo
-				a#collapse.button-collapse(href='#', data-activates='navbar-collapse')
-					i.material-icons menu
-				a.search-btn.button-collapse.right(href='#')
-					i.material-icons search
-				
-				ul.right.hide-on-med-and-down
-					li
-						a.search-btn(href='#')
-							i.material-icons search
-					li
-						a(href='badges.html')
-							i.material-icons view_module
-					li
-						a(href='collapsible.html')
-							i.material-icons refresh
-					li
-						a(href='mobile.html')
-							i.material-icons more_vert
-					
-				ul#navbar-collapse.side-nav
-					li
-						a(href='sass.html') Sass
-					li
-						a(href='badges.html') Components
-					li
-						a(href='collapsible.html') Javascript
-					li
-						a(href='mobile.html') Mobile
+		#index-banner.section.no-pad-bot
+			.container
+				br
+				br
+				h1.header.center.orange-text Starter Template
+				.row.center
+					h5.header.col.s12.light A modern responsive front-end framework based on Material Design
+				.row.center
+					a#download-button.btn-large.waves-effect.waves-light.orange(href='http://materializecss.com/getting-started.html') Get Started
+				br
+				br
 
-			#search-nav.nav-wrapper.container
-				form
-					.input-field
-						input#search(type='search', required='')
-						label(for='search')
-							i.material-icons search
-						i.material-icons close
+		.container
+			.section
+				// Icon Section
+				.row
+					.col.s12.m4
+						.icon-block
+							h2.center.light-blue-text
+								i.material-icons flash_on
+							h5.center Speeds up development
+							p.light
+								| We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.
+					.col.s12.m4
+						.icon-block
+							h2.center.light-blue-text
+								i.material-icons group
+							h5.center User Experience Focused
+							p.light
+								| By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.
+					.col.s12.m4
+						.icon-block
+							h2.center.light-blue-text
+								i.material-icons settings
+							h5.center Easy to work with
+							p.light
+								| We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.
+			br
+			br
+
+		include footer.pug
+

@@ -1,4 +1,4 @@
-var $ = window.jQuery =  require('jquery');
+var $ = window.jQuery = require('jquery');
 require('materialize-css');
 require('../sass/index.scss');
 require('materialize-css/sass/materialize.scss');
@@ -11,6 +11,16 @@ $(function () {
 	$('.search-btn').click(showSearchNav);
 
 	$('#search').focusout(hideSearchNav);
+
+	$('.dropdown-button').dropdown({
+		inDuration: 300,
+		outDuration: 225,
+		constrain_width: false, // Does not change width of dropdown to that of the activator
+		hover: true, // Activate on hover
+		gutter: 0, // Spacing from edge
+		belowOrigin: true, // Displays dropdown below the button
+		alignment: 'left' // Displays dropdown with edge aligned to the left of button
+	});
 });
 
 function hideSearchNav() {
@@ -29,4 +39,4 @@ function showSearchNav() {
 function showHideSearchNav() {
 	$('#search-nav').toggle(500);
 	$('#main-nav').toggle(500);
-} 
+}
