@@ -1,6 +1,5 @@
 var $ = window.jQuery = require('jquery');
 require('materialize-css');
-require('materialize-css/sass/materialize.scss');
 require('../sass/index.scss');
 
 $(function () {

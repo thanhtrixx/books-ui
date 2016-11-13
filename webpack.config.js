@@ -26,7 +26,7 @@ module.exports = {
 			loader: 'file'
 		}, {
 			test: /\.scss$/,
-			loaders: ['style', 'css', 'sass']
+			loaders: ['style', 'css', 'resolve-url', 'sass?sourceMap']
 		}]
 	},
 	plugins: [
@@ -45,5 +45,5 @@ module.exports = {
 		// }),
 		new webpack.optimize.OccurrenceOrderPlugin(),
 		new webpack.NoErrorsPlugin(),
-	]
+	],
 };

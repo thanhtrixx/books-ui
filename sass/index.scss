@@ -1,4 +1,4 @@
-/*@import '~materialize-css/sass/materialize.scss';*/
+@import '~materialize-css/sass/materialize.scss';
 
 .fixed-action-btn {
     position: fixed;
@@ -14,7 +14,7 @@
 	margin: 10px 0px;
 }
 
-@media screen and (max-width: 993px) {
+@media screen and (max-width: $medium-screen-up) {
 	.brand-logo img {
 		height: 40px;
 		margin: 8px 0px;
