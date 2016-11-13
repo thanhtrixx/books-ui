@@ -1,16 +1,21 @@
-var $ = window.jQuery = require('jquery');
-require('materialize-css');
-require('../sass/index.scss');
+import 'materialize-css'
+import '../sass/index.scss'
 
-$(function () {
+$(() => {
+	_searchNavBar()
+	_dropDown()
+	_modal()
+})
 
-	$('#collapse').sideNav();
-	$('#search-nav').hide();
+const _searchNavBar = () => {
+	$('#collapse').sideNav()
+	$('#search-nav').hide()
 
-	$('.search-btn').click(showSearchNav);
+	$('.search-btn').click(showSearchNav)
+	$('#search').focusout(hideSearchNav)
+}
 
-	$('#search').focusout(hideSearchNav);
-
+const _dropDown = () => {
 	$('.dropdown-button').dropdown({
 		inDuration: 300,
 		outDuration: 225,
@@ -19,23 +24,27 @@ $(function () {
 		gutter: 0,
 		belowOrigin: true,
 		alignment: 'left'
-	});
-});
-
-function hideSearchNav() {
-	console.log('hide');
-	showHideSearchNav();
-	$('#search').val('');
+	})
 }
 
-function showSearchNav() {
-	showHideSearchNav();
-	setTimeout(function () {
-		$('#search').focus();
-	}, 600);
+const _modal = () => {
+	$('.modal').modal()
 }
 
-function showHideSearchNav() {
-	$('#search-nav').toggle(500);
-	$('#main-nav').toggle(500);
+const hideSearchNav = () => {
+	console.log('hide')
+	showHideSearchNav()
+	$('#search').val('')
+}
+
+const showSearchNav = () => {
+	showHideSearchNav()
+	setTimeout(() => {
+		$('#search').focus()
+	}, 600)
+}
+
+const showHideSearchNav = () => {
+	$('#search-nav').toggle(500)
+	$('#main-nav').toggle(500)
 }

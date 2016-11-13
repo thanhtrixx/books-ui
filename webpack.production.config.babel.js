@@ -3,15 +3,9 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-	devtool: 'inline-source-map',
+	devtool: 'cheap-module-source-map',
 	context: __dirname,
 	entry: './js/index.js',
-	// resolve: {
-	// 	extensions: ['', '.js', '.css', '.scss', '.woff','.woff2', '.ttf', '.eot', '.svg'],
-	// 	alias: {
-	// 		'materialize-css': path.join(__dirname, '/node_modules/materialize-css/')
-	// 	}
-	// },
 	output: {
 		path: path.join(__dirname, 'dist'),
 		publicPath: '',
@@ -27,13 +21,23 @@ module.exports = {
 		}, {
 			test: /\.scss$/,
 			loaders: ['style', 'css', 'resolve-url', 'sass?sourceMap']
+		}, {
+			test: /\.js$/,
+			exclude: /node_modules/,
+			loader: "babel-loader"
 		}]
 	},
 	plugins: [
+		new webpack.DefinePlugin({
+			'process.env': {
+				'NODE_ENV': JSON.stringify('production')
+			}
+		}),
 		new webpack.ProvidePlugin({
 			jQuery: 'jquery',
 			$: 'jquery',
-			jquery: 'jquery'
+			jquery: 'jquery',
+			'window.jQuery': 'jquery'
 		}),
 		new HtmlWebpackPlugin({
 			filename: 'index.html',
@@ -45,5 +49,15 @@ module.exports = {
 		// }),
 		new webpack.optimize.OccurrenceOrderPlugin(),
 		new webpack.NoErrorsPlugin(),
-	],
+		new webpack.optimize.CommonsChunkPlugin('common.js'),
+		new webpack.optimize.DedupePlugin(),
+		new webpack.optimize.UglifyJsPlugin(),
+		new webpack.optimize.AggressiveMergingPlugin(),
+		new webpack.optimize.LimitChunkCountPlugin({
+			maxChunks: 15
+		}),
+		new webpack.optimize.MinChunkSizePlugin({
+			minChunkSize: 10000
+		})
+	]
 };
