@@ -1,0 +1,22 @@
+/*@import '~materialize-css/sass/materialize.scss';*/
+
+.fixed-action-btn {
+    position: fixed;
+    right: 23px;
+    bottom: 23px;
+    padding-top: 15px;
+    margin-bottom: 0;
+    z-index: 998;
+}
+
+.brand-logo img {
+	height: 44px;
+	margin: 10px 0px;
+}
+
+@media screen and (max-width: 993px) {
+	.brand-logo img {
+		height: 40px;
+		margin: 8px 0px;
+	}
+}

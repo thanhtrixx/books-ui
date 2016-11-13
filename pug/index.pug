@@ -10,7 +10,9 @@ html
 		meta(name='description', content='The website for book lovers')
 		meta(name='viewport', content='width=device-width, initial-scale=1.0')
 		meta(http-equiv='X-UA-Compatible', content='IE=edge')
-		meta(name='theme-color', content='#81d4fa')
+		meta(name='theme-color', content='#5c6bc0')
+		title Book lovers
+		link(rel='icon', type='image/png', href='assets/favicon.png')
 	body
 		include header.pug
 	
@@ -52,8 +54,21 @@ html
 							h5.center Easy to work with
 							p.light
 								| We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.
+
+					// Modal Trigger
+					a.waves-effect.waves-light.btn(href='#modal1') Modal
+					// Modal Structure
+					#modal1.modal
+						.modal-content
+							h4 Modal Header
+							p A bunch of text
+						.modal-footer
+							a.modal-action.modal-close.waves-effect.waves-green.btn-flat(href='#!') Agree
+
+
 			br
 			br
 
 		include footer.pug
 
+//include media_play.pug

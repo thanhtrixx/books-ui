@@ -7,9 +7,11 @@ module.exports = {
 	context: __dirname,
 	entry: './js/index.js',
 	// resolve: {
-	// 	extensions: ['', '.js', '.json'],
-	// 	modules: [path.resolve(__dirname, './js'), 'node_modules/'],
-  // },
+	// 	extensions: ['', '.js', '.css', '.scss', '.woff','.woff2', '.ttf', '.eot', '.svg'],
+	// 	alias: {
+	// 		'materialize-css': path.join(__dirname, '/node_modules/materialize-css/')
+	// 	}
+	// },
 	output: {
 		path: path.join(__dirname, 'dist'),
 		publicPath: '',
