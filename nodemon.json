@@ -1,0 +1,10 @@
+{
+	"restartable": "rs",
+	"verbose": true,
+	"events": {
+		"restart": "echo App restarted"
+	},
+	"env": {
+		"NODE_ENV": "development"
+	}
+}

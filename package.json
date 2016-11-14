@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --progress --colors --watch --inline --hot --host 0.0.0.0",
+    "dev": "webpack-dev-server --progress --colors --watch --inline --hot --host 0.0.0.0",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "prod": "webpack -p --config ./webpack.production.config.babel.js --colors"
+    "prod": "webpack -p --config ./webpack.production.config.babel.js --colors",
+		"start": "nodemon --watch webpack.config.babel.js --exec yarn run dev"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,7 @@
     "html-webpack-plugin": "^2.24.0",
     "materialize-css": "^0.97.8",
     "node-sass": "^3.10.1",
+    "nodemon": "^1.11.0",
     "pug": "^2.0.0-beta6",
     "pug-loader": "^2.3.0",
     "resolve-url-loader": "^1.6.0",
