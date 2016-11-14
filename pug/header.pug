@@ -59,22 +59,67 @@ ul#navbar-collapse.side-nav
 	li
 		.userView
 			.background
-				img(src='http://materializecss.com/images/office.jpg')
+				img(src='assets/book-banner.jpeg')
 			a(href='#!user')
-				img.circle(src='http://materializecss.com/images/yuna.jpg')
+				img.circle(src='assets/user-icon.png')
 			a(href='#!name')
 				span.white-text.name John Doe
 			a(href='#!email')
 				span.white-text.email jdandturk@gmail.com
-	li
-		a(href='#!')
-			i.material-icons cloud
-			| First Link With Icon
-	li
-		a(href='#!') Second Link
+	//- li
+	//- 	a.collapsible-header(href='#!')
+	//- 		i.material-icons sort
+	//- 		| Top
+	//- 	.collapsible-body
+	//- 		ul
+	//- 			li
+	//- 				a(href='#!') Month
+	//- 			li
+	//- 				a(href='#!') Week
+	//- 			li.divider
+	//- 			li
+	//- 				a(href='#!') All
+
+	li.no-padding
+		ul.collapsible.collapsible-accordion
+			li
+				a.collapsible-header
+					| Dropdown
+					i.material-icons.right keyboard_arrow_right
+				.collapsible-body
+					ul
+						li
+							a(href='#!') First
+						li
+							a(href='#!') Second
+						li
+							a(href='#!') Third
+						li
+							a(href='#!') Fourth
+
+	li.no-padding
+		ul.collapsible.collapsible-accordion
+			li
+				a.collapsible-header
+					| Dropdown2
+					i.material-icons.left sort
+					i.material-icons.right keyboard_arrow_right
+				.collapsible-body
+					ul
+						li
+							a(href='#!') First
+						li
+							a(href='#!') Second
+						li
+							a(href='#!') Third
+						li
+							a(href='#!') Fourth
+
 	li
 		.divider
 	li
 		a.subheader Subheader
 	li
 		a.waves-effect(href='#!') Third Link With Waves
+
+

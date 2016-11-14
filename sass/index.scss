@@ -1,12 +1,11 @@
 @import '~materialize-css/sass/materialize.scss';
-
 .fixed-action-btn {
-    position: fixed;
-    right: 23px;
-    bottom: 23px;
-    padding-top: 15px;
-    margin-bottom: 0;
-    z-index: 998;
+	position: fixed;
+	right: 23px;
+	bottom: 23px;
+	padding-top: 15px;
+	margin-bottom: 0;
+	z-index: 998;
 }
 
 .brand-logo img {
@@ -19,4 +18,11 @@
 		height: 40px;
 		margin: 8px 0px;
 	}
+}
+
+.collapsible li.active i.right {
+	-ms-transform: rotate(90deg); // IE 9
+	-webkit-transform: rotate(90deg); // Chrome, Safari, Opera
+	-moz-transform: rotate(90deg); // Mozilla
+	transform: rotate(90deg);
 }

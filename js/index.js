@@ -9,6 +9,7 @@ $(() => {
 
 const _searchNavBar = () => {
 	$('#collapse').sideNav()
+	$('.collapsible').collapsible();
 	$('#search-nav').hide()
 
 	$('.search-btn').click(showSearchNav)
