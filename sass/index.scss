@@ -13,11 +13,28 @@
 	margin: 10px 0px;
 }
 
+img.profile-img {
+	height: 36px;
+	position: relative;
+	top: 14px
+}
+
 @media screen and (max-width: $medium-screen-up) {
 	.brand-logo img {
 		height: 40px;
 		margin: 8px 0px;
 	}
+	// show profile image in mobile mode
+	/*img.profile-img {
+		height: 32px;
+		position: relative;
+		top: 12px
+	}*/
+}
+
+#search-nav .input-field {
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 .collapsible li.active i.right {

@@ -1,3 +1,5 @@
+include ./header_mixis.pug
+
 .navbar-fixed
 	nav.indigo(role='navigation')
 		#main-nav.nav-wrapper.container
@@ -5,6 +7,9 @@
 				img.responsive-img(src='assets/favicon.png', alt='Book lover icon')
 			a#collapse.button-collapse(href='#', data-activates='navbar-collapse')
 				i.material-icons menu
+			// show profile image in mobile mode
+			//- a.button-collapse.right(href='#', data-activates='navbar-collapse')
+			//- 	img.responsive-img.circle.profile-img(src='assets/yuna.jpg')
 			a.search-btn.button-collapse.right(href='#')
 				i.material-icons search
 
@@ -15,7 +20,7 @@
 						| Home
 
 				li
-					a.dropdown-button(href='#!', data-activates='top-dropdown')
+					a.top-dropdown-button(href='#!', data-activates='top-dropdown')
 						i.material-icons.left sort
 						| Top
 				li
@@ -29,13 +34,8 @@
 						i.material-icons.left search
 						| Search
 				li
-					a(href='badges.html')
-						i.material-icons.left create
-						| Signup
-				li
-					a(href='collapsible.html')
-						i.material-icons.left exit_to_app
-						| Login
+					a.profile-dropdown-button(href='#!', data-activates='user-dropdown')
+						img.responsive-img.circle.profile-img(src='assets/yuna.jpg')
 
 		#search-nav.nav-wrapper.container
 			form
@@ -45,23 +45,25 @@
 						i.material-icons search
 					i.material-icons.right close
 
-// Top dropdown
+// Top dropdown in destop mode
 ul#top-dropdown.dropdown-content
-	li
-		a(href='#!') Month
-	li
-		a(href='#!') Week
-	li.divider
-	li
-		a(href='#!') All
+	+top-block
+// User dropdown in destop mode
+ul#user-dropdown.dropdown-content
+	+user-block
 
+// side nav in mobile mode
 ul#navbar-collapse.side-nav
 	li
 		.userView
 			.background
 				img(src='assets/book-banner.jpeg')
 			a(href='#!user')
-				img.circle(src='assets/user-icon.png')
+				img.circle(src='assets/yuna.jpg')
+			a(href='#!name')
+				span.white-text.name John Doe
+			a(href='#!email')
+				span.white-text.email jdandturk@gmail.com
 
 	li
 		a(href='#')
@@ -79,28 +81,13 @@ ul#navbar-collapse.side-nav
 					i.material-icons.right keyboard_arrow_right
 				.collapsible-body
 					ul
-						li
-							a(href='#!') Month
-						li
-							a(href='#!') Week
-						li
-							a(href='#!') All
-
-	li
-		.divider
+						+top-block
 	li
 		a.waves-effect(href='#!') New
 			i.material-icons.left refresh
 
-	//- li
-	//- 	a.subheader User
 	li
 		.divider
 	li
-		a(href='badges.html')
-			i.material-icons.left create
-			| Signup
-	li
-		a(href='collapsible.html')
-			i.material-icons.left exit_to_app
-			| Login
+		a.subheader User
+	+user-block
