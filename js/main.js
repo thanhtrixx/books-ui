@@ -1,5 +1,5 @@
 import 'materialize-css'
-import '../sass/index.scss'
+import '../sass/style.scss'
 
 $(() => {
 	_searchNavBar()

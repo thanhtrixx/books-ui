@@ -5,7 +5,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
 	devtool: 'inline-source-map',
 	context: __dirname,
-	entry: './js/index.js',
+	entry: './js/main.js',
 	// resolve: {
 	// 	extensions: ['', '.js', '.css', '.scss', '.woff','.woff2', '.ttf', '.eot', '.svg'],
 	// 	alias: {
