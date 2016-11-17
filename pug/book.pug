@@ -1,15 +1,9 @@
-.card
-	.card-image.waves-effect.waves-block.waves-light
-		img.activator(src='http://materializecss.com/images/office.jpg')
-	.card-content
-		span.card-title.activator.grey-text.text-darken-4
-			| Card Title
-			i.material-icons.right more_vert
-		p
-			a(href='#') This is a link
-	.card-reveal
-		span.card-title.grey-text.text-darken-4
-			| Card Title
-			i.material-icons.right close
-		p
-			| Here is some more information about this product that is only revealed once clicked on.
+mixin book(href, img-href, intro)
+	.card.horizontal
+		.card-image
+			img(src=img-href)
+		.card-stacked
+			.card-content
+				p=intro
+			.card-action
+				a(href=href) Open this book

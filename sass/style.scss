@@ -30,6 +30,12 @@ img.profile-img {
 		position: relative;
 		top: 12px
 	}*/
+	.card .card-title {
+		font-size: 16px !important;
+	}
+	.card .card-content {
+		padding: 10px;
+	}
 }
 
 #search-nav .input-field {
@@ -42,4 +48,8 @@ img.profile-img {
 	-webkit-transform: rotate(90deg); // Chrome, Safari, Opera
 	-moz-transform: rotate(90deg); // Mozilla
 	transform: rotate(90deg);
+}
+
+.card .card-title {
+	font-size: 18px;
 }

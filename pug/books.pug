@@ -1,0 +1,25 @@
+//- include book.pug
+
+//- mixin book(href, img-href, intro)
+mixin book
+	.card
+		.card-image.waves-effect.waves-block.waves-light
+			img.activator(src='http://blog.onpaperwings.com/uploaded_images/bookcover-793892.jpg')
+			span.card-title Paris Review
+		.card-content
+			span.card-title.activator.grey-text.text-darken-4
+				i.material-icons.right more_vert
+			p
+				a(href='#') Detail
+		.card-reveal
+			span.card-title.grey-text.text-darken-4
+				| Paris Review
+				i.material-icons.right close
+			p
+				| Here is some more information about this product that is only revealed once clicked on.
+
+
+.row
+	-for(var i = 0; i < 8; i++)
+		.col.s6.m4.l3
+			+book
