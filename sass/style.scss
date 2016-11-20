@@ -1,4 +1,8 @@
 @import '~materialize-css/sass/materialize.scss';
+.navbar-fixed {
+	z-index: 999;
+}
+
 .fixed-action-btn {
 	position: fixed;
 	right: 23px;
@@ -52,4 +56,27 @@ img.profile-img {
 
 .card .card-title {
 	font-size: 18px;
+}
+
+.book-info {
+	position: absolute;
+	bottom: 0px;
+	background: rgba(0, 0, 0, 0.7);
+	padding: 5px;
+	width: 100%;
+	z-index: 997;
+}
+
+.book-info p {
+	color: white;
+	margin: 2px 5px;
+}
+
+.book-info p.book-name {
+	font-size: 15px;
+}
+
+.book-info p.book-author {
+	font-size: 12px;
+	color: gray
 }
