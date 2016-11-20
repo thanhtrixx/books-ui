@@ -44,6 +44,10 @@ module.exports = {
 			filename: 'index.html',
 			template: 'pug/index.pug',
 		}),
+		new HtmlWebpackPlugin({
+			filename: 'login.html',
+			template: 'pug/login.pug',
+		}),
 		// new HtmlWebpackPlugin({
 		// 	filename: 'index_login.html',
 		// 	template: 'pug/index_login.pug',

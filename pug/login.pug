@@ -1,0 +1,47 @@
+include mixins.pug
+
++html
+	style.
+		html,
+		body {
+				height: 100%;
+		}
+		html {
+				display: table;
+				margin: auto;
+		}
+		body {
+				display: table-cell;
+				vertical-align: middle;
+		}
+	.row
+		.col.s12.z-depth-4.card-panel
+			form.login-form
+				.row
+					.input-field.col.s12.center
+						img.circle.responsive-img.valign.profile-image-login(src='assets/favicon.png', alt='')
+						p.center.login-form-text Book lover
+				.row.margin
+					.input-field.col.s12
+						i.prefix.material-icons account_circle
+						input#username(type='text')
+						label(for='username') Username
+				.row.margin
+					.input-field.col.s12
+						i.prefix.material-icons lock_outline
+						input#password(type='password')
+						label(for='password') Password
+				.row
+					.input-field.col.s12.m12.l12.login-text
+						input#remember-me(type='checkbox')
+						label(for='remember-me') Remember me
+				.row
+					.input-field.col.s12
+						a.btn.waves-effect.waves-light.col.s12(href='index.html') Login
+				.row
+					.input-field.col.s6.m6.l6
+						p.margin.medium-small
+							a(href='page-register.html') Register Now!
+					.input-field.col.s6.m6.l6
+						p.margin.medium-small.right-align
+							a(href='page-forgot-password.html') Forgot password ?
