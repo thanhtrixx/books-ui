@@ -1,19 +1,22 @@
-doctype html
-html
-	head
-		meta(http-equiv='X-UA-Compatible', content='IE=edge')
-		meta(charset='utf-8')
-		title
-		meta(name='author', content='TriLe')
-		meta(name='description', content='The website for book lovers')
-		meta(name='viewport', content='width=device-width, initial-scale=1')
-		link(rel='stylesheet', type='text/css', href='//fonts.googleapis.com/css?family=Roboto:300,400,500,700')
-		link(rel='stylesheet', type='text/css', href='//fonts.googleapis.com/icon?family=Material+Icons')
-	body
-		include header_login.pug
-		
-		.container
-			include content.pug
-			include float_btn.pug
+include mixins.pug
 
-		include footer.pug
++html
+	include header_login.pug
+
+	.container
+
+		.section
+			a.catelory(href='#') Store
+			include books.pug
+
+		.section
+			a.catelory(href='#') Improve
+			include books.pug
+
+		.section
+			a.catelory(href='#') Improve
+			include books.pug
+
+	include footer.pug
+
+	include media_play.pug

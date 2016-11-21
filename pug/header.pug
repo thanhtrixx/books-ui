@@ -1,3 +1,5 @@
+include ./mixins.pug
+
 .navbar-fixed
 	nav.indigo(role='navigation')
 		#main-nav.nav-wrapper.container
@@ -15,7 +17,7 @@
 						| Home
 
 				li
-					a.dropdown-button(href='#!', data-activates='top-dropdown')
+					a.top-dropdown-button(href='#!', data-activates='top-dropdown')
 						i.material-icons.left sort
 						| Top
 				li
@@ -33,7 +35,7 @@
 						i.material-icons.left create
 						| Signup
 				li
-					a(href='collapsible.html')
+					a(href='login.html')
 						i.material-icons.left exit_to_app
 						| Login
 
@@ -45,15 +47,9 @@
 						i.material-icons search
 					i.material-icons.right close
 
-// Top dropdown
+// Top dropdown in destop mode
 ul#top-dropdown.dropdown-content
-	li
-		a(href='#!') Month
-	li
-		a(href='#!') Week
-	li.divider
-	li
-		a(href='#!') All
+	+top-block
 
 ul#navbar-collapse.side-nav
 	li
@@ -62,6 +58,7 @@ ul#navbar-collapse.side-nav
 				img(src='assets/book-banner.jpeg')
 			a(href='#!user')
 				img.circle(src='assets/user-icon.png')
+			br
 
 	li
 		a(href='#')
@@ -79,12 +76,7 @@ ul#navbar-collapse.side-nav
 					i.material-icons.right keyboard_arrow_right
 				.collapsible-body
 					ul
-						li
-							a(href='#!') Month
-						li
-							a(href='#!') Week
-						li
-							a(href='#!') All
+						+top-block
 
 	li
 		.divider
@@ -101,6 +93,6 @@ ul#navbar-collapse.side-nav
 			i.material-icons.left create
 			| Signup
 	li
-		a(href='collapsible.html')
+		a(href='login.html')
 			i.material-icons.left exit_to_app
 			| Login
