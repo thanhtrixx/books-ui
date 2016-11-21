@@ -40,3 +40,12 @@ mixin top-block
 		a(href='#!') Week
 	li
 		a(href='#!') All
+
+mixin book(href, imgSrc, name, author)
+	.card
+		a(href=href)
+			.card-image.waves-effect.waves-block.waves-light
+				img.activator(src=imgSrc)
+			.book-info
+				p.book-name=name
+				p.book-author=author

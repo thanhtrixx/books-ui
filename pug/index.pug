@@ -3,20 +3,18 @@ include mixins.pug
 +html
 	include header_login.pug
 
-	#index-banner.section.no-pad-bot
-		.container
-			br
-			br
-			h1.header.center.orange-text Starter Template
-			.row.center
-				h5.header.col.s12.light A modern responsive front-end framework based on Material Design
-			.row.center
-				a#download-button.btn-large.waves-effect.waves-light.orange(href='http://materializecss.com/getting-started.html') Get Started
-			br
-			br
-
 	.container
+
 		.section
+			a.catelory(href='#') Store
+			include books.pug
+
+		.section
+			a.catelory(href='#') Improve
+			include books.pug
+
+		.section
+			a.catelory(href='#') Improve
 			include books.pug
 
 	include footer.pug

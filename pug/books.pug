@@ -1,16 +1,6 @@
-//- include book.pug
-
-//- mixin book(href, img-href, intro)
-mixin book
-	.card
-		a(href='#')
-			.card-image.waves-effect.waves-block.waves-light
-				img.activator(src='http://blog.onpaperwings.com/uploaded_images/bookcover-793892.jpg')
-			.book-info
-				p.book-name Paris Review
-				p.book-author Adam Locen
+include mixins.pug
 
 .row
 	-for(var i = 0; i < 8; i++)
 		.col.s6.m4.l3
-			+book
+			+book('#', 'http://blog.onpaperwings.com/uploaded_images/bookcover-793892.jpg', 'Paris Review', 'Adam Simson')
