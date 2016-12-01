@@ -48,9 +48,6 @@ img.profile-img {
 }
 
 .collapsible li.active i.right {
-	-ms-transform: rotate(90deg); // IE 9
-	-webkit-transform: rotate(90deg); // Chrome, Safari, Opera
-	-moz-transform: rotate(90deg); // Mozilla
 	transform: rotate(90deg);
 }
 
@@ -130,4 +127,12 @@ img.profile-img {
 	font-weight: 300;
 	font-size: 20px;
 	line-height: 1.4;
+}
+
+#media-play-modal .row button {
+	margin: auto 5px;
+}
+
+#media-play-modal .btn-flat i {
+	color: #343434;
 }

@@ -5,6 +5,7 @@ $(() => {
 	_searchNavBar()
 	_dropDown()
 	_modal()
+	_mediaSeeker()
 })
 
 const _searchNavBar = () => {
@@ -56,4 +57,7 @@ const showSearchNav = () => {
 const showHideSearchNav = () => {
 	$('#search-nav').toggle(500)
 	$('#main-nav').toggle(500)
+}
+
+const _mediaSeeker = () => {
 }

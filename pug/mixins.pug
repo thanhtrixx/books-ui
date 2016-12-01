@@ -42,10 +42,10 @@ mixin top-block
 		a(href='#!') All
 
 mixin book(href, imgSrc, name, author)
-	.card
+	.card.hoverable
 		a(href=href)
 			.card-image.waves-effect.waves-block.waves-light
 				img.activator(src=imgSrc)
 			.book-info
-				p.book-name=name
-				p.book-author=author
+				p.book-name.truncate=name
+				p.book-author.truncate=author
